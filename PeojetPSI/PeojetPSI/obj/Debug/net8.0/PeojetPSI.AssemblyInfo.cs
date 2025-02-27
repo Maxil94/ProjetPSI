@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PeojetPSI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0ba29846795b119419255e51f2ad94595a324be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2488874158323e909c865bcd7ab16b7d3e7ad03")]
 [assembly: System.Reflection.AssemblyProductAttribute("PeojetPSI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PeojetPSI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

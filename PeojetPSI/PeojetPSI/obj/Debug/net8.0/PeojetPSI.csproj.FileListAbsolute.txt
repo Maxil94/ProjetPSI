@@ -1,0 +1,16 @@
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.AssemblyInfoInputs.cache
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.AssemblyInfo.cs
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.sourcelink.json
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\bin\Debug\net8.0\PeojetPSI.exe
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\bin\Debug\net8.0\PeojetPSI.deps.json
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\bin\Debug\net8.0\PeojetPSI.runtimeconfig.json
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\bin\Debug\net8.0\PeojetPSI.dll
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\bin\Debug\net8.0\PeojetPSI.pdb
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.dll
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\refint\PeojetPSI.dll
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.pdb
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\PeojetPSI.genruntimeconfig.cache
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\obj\Debug\net8.0\ref\PeojetPSI.dll
+C:\Users\Utilisateur\Documents\GitHub\ProjetPSI\PeojetPSI\PeojetPSI\bin\Debug\net8.0\soc-karate.txt

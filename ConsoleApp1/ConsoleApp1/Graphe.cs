@@ -96,7 +96,75 @@ namespace ConsoleApp1
                 Console.WriteLine();
             }
         }
+        public void ParcoursProfondeur(Noeud noeud, HashSet<Noeud> visites)
+        {
+            if (visites.Contains(noeud))
+                return;
+            Console.Write(noeud.Identifiant + " ");
+            visites.Add(noeud);
+            foreach (var voisin in noeud.Voisin)
+            {
+                ParcoursProfondeur(voisin, visites);
+            }
+        }
+        
+        public void ParcoursLargeur(Noeud depart)
+        {
+            Queue<Noeud> file = new Queue<Noeud>();
+            HashSet<Noeud> visites = new HashSet<Noeud>();
+        
+            file.Enqueue(depart);
+            visites.Add(depart);
+        
+            while (file.Count > 0)
+            {
+                Noeud actuel = file.Dequeue();
+                Console.Write(actuel.Identifiant + " ");
+        
+                foreach (var voisin in actuel.Voisin)
+                {
+                    if (!visites.Contains(voisin))
+                    {
+                        file.Enqueue(voisin);
+                        visites.Add(voisin);
+                    }
+                }
+            }
+        }
+        public bool EstConnexe()
+        {
+            if (noeuds.Count == 0)
+            {
+                return false;
+            }
+            HashSet<Noeud> visites = new HashSet<Noeud>(); 
+            ParcoursProfondeur(noeuds[0], visites); 
+        
+            return visites.Count == noeuds.Count;
+        }
+        
+        public bool ContientCycle()
+        {
+            HashSet<Noeud> visites = new HashSet<Noeud>();
+            return ContientCycle(noeuds[0], null, visites);
+        }
+        
+        public bool ContientCycle (Noeud noeud, Noeud parent, HashSet <Noeud> visites)
+        {
+            visites.Add (noeud);
+            foreach (var voisin in noeud.Voisin)
+            {
+                if (!visites.Contains (voisin))
+                {
+                    if (ContientCycle(voisin, noeud, visites))
+                    { return true; }
+                }
+                else if (voisin != parent )
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
-
-
 }

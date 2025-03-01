@@ -18,6 +18,12 @@ class Program
         Console.WriteLine("\nMatrice d'adjacence:");
         graphe.MatriceAdjacence();
 
+        Console.WriteLine("\n Parcours en profondeur (DFS) :");
+        graphe.ParcoursProfondeur(noeud1, new HashSet<Noeud>());
+        Console.WriteLine("\n Parcours en largeur (BFS) :");
+        graphe.ParcoursLargeur(noeud1);
+        Console.WriteLine("\n Le graphe est-il connexe ? " + graphe.EstConnexe());
+        Console.WriteLine("\n Le graphe contient-il un cycle ? " + graphe.ContientCycle());
 
         DesignGraphe designGraphe = new DesignGraphe(nombreDeNoeuds);
 

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
 using ConsoleApp1;
+
 class Program
 {
-
     static void Main()
     {
         int nombreDeNoeuds = 34;
@@ -18,26 +16,23 @@ class Program
         Console.WriteLine("\nMatrice d'adjacence:");
         graphe.MatriceAdjacence();
 
-        Console.WriteLine("\n Parcours en profondeur (DFS) :");
-        graphe.ParcoursProfondeur(noeud1, new HashSet<Noeud>());
-        Console.WriteLine("\n Parcours en largeur (BFS) :");
-        graphe.ParcoursLargeur(noeud1);
-        Console.WriteLine("\n Le graphe est-il connexe ? " + graphe.EstConnexe());
-        Console.WriteLine("\n Le graphe contient-il un cycle ? " + graphe.ContientCycle());
+        Noeud noeudDeDepart = graphe.GetNoeuds()[0];
+
+        Console.WriteLine("\nParcours en profondeur (DFS) :");
+        graphe.ParcoursProfondeur(noeudDeDepart, new HashSet<Noeud>());
+
+        Console.WriteLine("\nParcours en largeur (BFS) :");
+        graphe.ParcoursLargeur(noeudDeDepart);
+
+        Console.WriteLine("\nLe graphe est-il connexe ? " + graphe.EstConnexe());
+        Console.WriteLine("\nLe graphe contient-il un cycle ? " + graphe.ContientCycle());
 
         DesignGraphe designGraphe = new DesignGraphe(nombreDeNoeuds);
-
-        // Charger les données dans DesignGraphe
         designGraphe.ChargerDepuisFichier("soc-karate.txt");
 
-        // Dessiner le graphe dans un fichier image
-        string cheminImage = "graphe_image.png";  // Spécifiez le chemin et le nom du fichier
+        string cheminImage = "graphe_image.png";
         designGraphe.DessinerGrapheDansImage(cheminImage);
 
-        // Message confirmant la sauvegarde de l'image
         Console.WriteLine($"\nL'image du graphe a été sauvegardée sous '{cheminImage}'.");
-
     }
-
-
 }

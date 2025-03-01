@@ -1,25 +1,24 @@
 ﻿using PeojetPSI;
 using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Drawing;
 class Program
 {
-    static void Main()
-    {
-        Graphe graphe = new Graphe();
+
+        static void Main()
+        {
+        int nombreDeNoeuds = 34; 
+        Graphe graphe = new Graphe(nombreDeNoeuds);
         graphe.Fichier("soc-karate.txt");
-        Noeud noeud1 = graphe.CreerNoeud(1);
-        Noeud noeud2 = graphe.CreerNoeud(2);
-        graphe.AjouterLien(noeud1, noeud2);
+        Console.WriteLine("Affichage du graphe sous forme de liste d'adjacence:");
         graphe.CréationGraphe();
+        Console.WriteLine("\nMatrice d'adjacence:");
+        graphe.MatriceAdjacence();
 
-        ///Console.WriteLine("Parcours en profondeur:");
-        ///graphe.ParcoursProfondeur(1);
-
-        ///Console.WriteLine("Parcours en largeur:");
-        ///graphe.ParcoursLargeur(1);
-
-        ///Console.WriteLine("Le graphe est-il connexe? " + graphe.EstConnexe());
-        ///Console.WriteLine("Le graphe contient-il un cycle? " + graphe.ContientCycle());
     }
+    
+
 }

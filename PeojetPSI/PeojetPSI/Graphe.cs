@@ -7,12 +7,20 @@ namespace PeojetPSI
     internal class Graphe
     {
         private List<Noeud> noeuds;
-        private List<Lien> liens;
-
-        public Graphe()
+        public int[,] mat;
+        public Graphe(int n )
         {
             this.noeuds = new List<Noeud>();
-            this.liens = new List<Lien>();
+            this.mat = new int[n, n];
+        }   
+        public List<Noeud> GetNoeuds()
+        {
+            return noeuds;
+        }
+
+        public int[,] GetMat()
+        {
+            return mat;
         }
 
         public void AjouterLien(Noeud noeud1, Noeud noeud2)
@@ -21,8 +29,10 @@ namespace PeojetPSI
             { noeuds.Add(noeud1); }
             if(!noeuds.Contains (noeud2)) 
             { noeuds.Add (noeud2); }
-            Lien lien = new Lien(noeud1, noeud2);
-            this.liens.Add(lien);
+            int id1 = noeud1.Identifiant;
+            int id2 = noeud2.Identifiant;
+            mat[id1, id2] = 1; 
+            mat[id2, id1] = 1;  
             noeud1.Voisin.Add(noeud2);
             noeud2.Voisin.Add(noeud1);
         }
@@ -70,6 +80,17 @@ namespace PeojetPSI
                     Console.Write(noeud.Voisin[i].Identifiant);
                     if (i < noeud.Voisin.Count - 1)
                         Console.Write(" - ");
+                }
+                Console.WriteLine();
+            }
+        }
+        public void MatriceAdjacence()
+        {
+            for (int i = 0;i < this.mat.GetLength(0);i++)
+            {
+                for(int j = 0;j<this.mat.GetLength(1);j++)
+                {
+                    Console.Write(this.mat[i,j]);
                 }
                 Console.WriteLine();
             }

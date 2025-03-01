@@ -74,6 +74,41 @@ namespace PeojetPSI
                 Console.WriteLine();
             }
         }
+        public void ParcoursProfondeur(Noeud noeud, HashSet<Noeud> visites)
+        {
+            if (visites.Contains(noeud))
+                return;
+            Console.Write(noeud.Identifiant + " ");
+            visites.Add(noeud);
+            foreach (var voisin in noeud.Voisin)
+            {
+                ParcoursProfondeur(voisin, visites);
+            }
+        }
+        
+        public void ParcoursLargeur(Noeud depart)
+        {
+            Queue<Noeud> file = new Queue<Noeud>();
+            HashSet<Noeud> visites = new HashSet<Noeud>();
+        
+            file.Enqueue(depart);
+            visites.Add(depart);
+        
+            while (file.Count > 0)
+            {
+                Noeud actuel = file.Dequeue();
+                Console.Write(actuel.Identifiant + " ");
+        
+                foreach (var voisin in actuel.Voisin)
+                {
+                    if (!visites.Contains(voisin))
+                    {
+                        file.Enqueue(voisin);
+                        visites.Add(voisin);
+                    }
+                }
+            }
+        }
     }
 
     
